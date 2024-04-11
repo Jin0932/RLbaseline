@@ -1,0 +1,38 @@
+
+Step:2000, Eval_reward4.847221077031736
+Step:4000, Eval_reward2.516149108165538
+Step:6000, Eval_reward25.26281442423051
+Step:8000, Eval_reward53.29308308787771
+Step:10000, Eval_reward51.092080083699265
+Traceback (most recent call last):
+  File "main.py", line 167, in <module>
+    main()
+  File "/home/jqwang16/miniconda3/envs/sac/lib/python3.8/site-packages/hydra/main.py", line 20, in decorated_main
+    run_hydra(
+  File "/home/jqwang16/miniconda3/envs/sac/lib/python3.8/site-packages/hydra/_internal/utils.py", line 171, in run_hydra
+    hydra.run(
+  File "/home/jqwang16/miniconda3/envs/sac/lib/python3.8/site-packages/hydra/_internal/hydra.py", line 82, in run
+    return run_job(
+  File "/home/jqwang16/miniconda3/envs/sac/lib/python3.8/site-packages/hydra/plugins/common/utils.py", line 109, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "main.py", line 163, in main
+    workspace.run()
+  File "main.py", line 133, in run
+    self.agent.update(self.replay_buffer, self.logger, self.step)
+  File "/data/jqwang16Files/Coding/sac/agent/sac.py", line 136, in update
+    self.update_critic(obs, action, reward, next_obs, not_done_no_max,
+  File "/data/jqwang16Files/Coding/sac/agent/sac.py", line 99, in update_critic
+    self.critic.log(logger, step)
+  File "/data/jqwang16Files/Coding/sac/agent/critic.py", line 34, in log
+    logger.log_histogram(f'train_critic/{k}_hist', v, step)
+  File "/data/jqwang16Files/Coding/sac/logger.py", line 193, in log_histogram
+    self._try_sw_log_histogram(key, histogram, step)
+  File "/data/jqwang16Files/Coding/sac/logger.py", line 160, in _try_sw_log_histogram
+    self._sw.add_histogram(key, histogram, step)
+  File "/home/jqwang16/miniconda3/envs/sac/lib/python3.8/site-packages/torch/utils/tensorboard/writer.py", line 429, in add_histogram
+    histogram(tag, values, bins, max_bins=max_bins), global_step, walltime)
+  File "/home/jqwang16/miniconda3/envs/sac/lib/python3.8/site-packages/torch/utils/tensorboard/summary.py", line 300, in histogram
+    hist = make_histogram(values.astype(float), bins, max_bins)
+  File "/home/jqwang16/miniconda3/envs/sac/lib/python3.8/site-packages/torch/utils/tensorboard/summary.py", line 324, in make_histogram
+    cum_counts = np.cumsum(np.greater(counts, 0, dtype=np.int32))
+TypeError: No loop matching the specified signature and casting was found for ufunc greater

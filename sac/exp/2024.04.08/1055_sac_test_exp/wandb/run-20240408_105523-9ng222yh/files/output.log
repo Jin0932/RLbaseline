@@ -1,0 +1,33 @@
+
+self.cfg.env Hopper-v2
+| [33mtrain[39m | E: 44 | S: 2000 | R: 16.2549 | D: 00.0 s | BR: 0.0000 | ALOSS: 0.0000 | CLOSS: 0.0000 | TLOSS: 0.0000 | TVAL: 0.0000 | AENT: 0.0000
+| [32meval[39m  | E: 88 | S: 2000 | R: 4.5106
+self.cfg.env Hopper-v2
+| [33mtrain[39m | E: 137 | S: 4000 | R: 10.5081 | D: 00.0 s | BR: 0.0000 | ALOSS: 0.0000 | CLOSS: 0.0000 | TLOSS: 0.0000 | TVAL: 0.0000 | AENT: 0.0000
+| [32meval[39m  | E: 186 | S: 4000 | R: 9.3815
+self.cfg.env Hopper-v2
+Traceback (most recent call last):
+  File "main.py", line 167, in <module>
+  File "/home/jqwang16/miniconda3/envs/sac/lib/python3.8/site-packages/hydra/main.py", line 20, in decorated_main
+    run_hydra(
+  File "/home/jqwang16/miniconda3/envs/sac/lib/python3.8/site-packages/hydra/_internal/utils.py", line 171, in run_hydra
+    hydra.run(
+  File "/home/jqwang16/miniconda3/envs/sac/lib/python3.8/site-packages/hydra/_internal/hydra.py", line 82, in run
+    return run_job(
+  File "/home/jqwang16/miniconda3/envs/sac/lib/python3.8/site-packages/hydra/plugins/common/utils.py", line 109, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "main.py", line 163, in main
+  File "main.py", line 153, in run
+    wandb.log({"eval_reward":eval_reward}, step=self.step)
+  File "main.py", line 92, in evaluate
+  File "/data/jqwang16Files/Coding/sac/logger.py", line 197, in dump
+    self._train_mg.dump(step, 'train', save)
+  File "/data/jqwang16Files/Coding/sac/logger.py", line 112, in dump
+    self._dump_to_csv(data)
+  File "/data/jqwang16Files/Coding/sac/logger.py", line 84, in _dump_to_csv
+    self._csv_writer.writerow(data)
+  File "/home/jqwang16/miniconda3/envs/sac/lib/python3.8/csv.py", line 154, in writerow
+    return self.writer.writerow(self._dict_to_list(rowdict))
+  File "/home/jqwang16/miniconda3/envs/sac/lib/python3.8/csv.py", line 149, in _dict_to_list
+    raise ValueError("dict contains fields not in fieldnames: "
+ValueError: dict contains fields not in fieldnames: 'critic_loss', 'actor_target_entropy', 'alpha_value', 'actor_loss', 'actor_entropy', 'batch_reward', 'alpha_loss'

@@ -1,0 +1,30 @@
+| [33mtrain[39m | E: 100 | S: 2000 | R: 2.0958 | D: 00.0 s | BR: 0.0000 | ALOSS: 0.0000 | CLOSS: 0.0000 | TLOSS: 0.0000 | TVAL: 0.0000 | AENT: 0.0000
+| [32meval[39m  | E: 100 | S: 2000 | R: 0.0729
+| [33mtrain[39m | E: 195 | S: 4000 | R: 0.0000 | D: 00.0 s | BR: 0.0000 | ALOSS: 0.0000 | CLOSS: 0.0000 | TLOSS: 0.0000 | TVAL: 0.0000 | AENT: 0.0000
+| [32meval[39m  | E: 195 | S: 4000 | R: 0.9271
+Traceback (most recent call last):
+  File "main.py", line 166, in <module>
+    main()
+  File "/home/jqwang16/miniconda3/envs/sac/lib/python3.8/site-packages/hydra/main.py", line 20, in decorated_main
+    run_hydra(
+  File "/home/jqwang16/miniconda3/envs/sac/lib/python3.8/site-packages/hydra/_internal/utils.py", line 171, in run_hydra
+    hydra.run(
+  File "/home/jqwang16/miniconda3/envs/sac/lib/python3.8/site-packages/hydra/_internal/hydra.py", line 82, in run
+    return run_job(
+  File "/home/jqwang16/miniconda3/envs/sac/lib/python3.8/site-packages/hydra/plugins/common/utils.py", line 109, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "main.py", line 162, in main
+    workspace.run()
+  File "main.py", line 103, in run
+    self.logger.dump(
+  File "/data/jqwang16Files/Coding/sac/logger.py", line 197, in dump
+    self._train_mg.dump(step, 'train', save)
+  File "/data/jqwang16Files/Coding/sac/logger.py", line 112, in dump
+    self._dump_to_csv(data)
+  File "/data/jqwang16Files/Coding/sac/logger.py", line 84, in _dump_to_csv
+    self._csv_writer.writerow(data)
+  File "/home/jqwang16/miniconda3/envs/sac/lib/python3.8/csv.py", line 154, in writerow
+    return self.writer.writerow(self._dict_to_list(rowdict))
+  File "/home/jqwang16/miniconda3/envs/sac/lib/python3.8/csv.py", line 149, in _dict_to_list
+    raise ValueError("dict contains fields not in fieldnames: "
+ValueError: dict contains fields not in fieldnames: 'actor_target_entropy', 'duration', 'alpha_loss', 'batch_reward', 'actor_entropy', 'critic_loss', 'actor_loss', 'alpha_value'
