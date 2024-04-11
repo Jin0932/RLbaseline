@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # environments=("HalfCheetah-v2" "Hopper-v2" "Swimmer-v2" "Walker2d-v2" "HumanoidStandup-v2" "Ant-v2" "Humanoid-v2" "InvertedDoublePendulum-v2" "InvertedPendulum-v2" "Reacher-v2")
-environments=("Walker2d-v2" "HumanoidStandup-v2" "Ant-v2" "Humanoid-v2" "InvertedDoublePendulum-v2" "InvertedPendulum-v2" "Reacher-v2")
+environments=("Walker2d-v2","HumanoidStandup-v2","Ant-v2","Humanoid-v2","InvertedDoublePendulum-v2","InvertedPendulum-v2","Reacher-v2")
 
 
-seeds=(0 1 2)
+seeds=(0,1,2)
 
 num_envs=${#environments[@]}
 num_seeds=${#seeds[@]}

@@ -1,0 +1,49 @@
+{
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.6.13",
+    "heartbeatAt": "2024-04-11T04:10:23.419732",
+    "startedAt": "2024-04-11T04:10:21.208233",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--algo=ddpg",
+        "--env=Ant-v2",
+        "--seed=2"
+    ],
+    "state": "running",
+    "program": "main.py",
+    "codePathLocal": "main.py",
+    "codePath": "DDPG\\main.py",
+    "git": {
+        "remote": "git@github.com:Jin0932/RLbaseline.git",
+        "commit": "c5db8351c360125f5d22d5fb1b2c17e0175f4b76"
+    },
+    "email": "jqw1024@gmail.com",
+    "root": "F:/OpenCode/RLbaseline",
+    "host": "DESKTOP-6TR8K1I",
+    "username": "JQWang",
+    "executable": "C:\\Users\\JQWang\\AppData\\Local\\anaconda3\\envs\\PIHJQ\\python.exe",
+    "cpu_count": 16,
+    "cpu_count_logical": 32,
+    "cpu_freq": {
+        "current": 4501.0,
+        "min": 0.0,
+        "max": 4501.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 4501.0,
+            "min": 0.0,
+            "max": 4501.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 496.09472274780273,
+            "used": 240.49716186523438
+        }
+    },
+    "memory": {
+        "total": 31.147579193115234
+    }
+}

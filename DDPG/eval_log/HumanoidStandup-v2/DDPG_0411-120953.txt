@@ -1,0 +1,21 @@
+render = False
+device = cpu
+ep_len = None
+h_scale = 1.0
+batch_size = 128
+fill_buffer = 20000
+buffer_size = 1000000.0
+train_interval = 50
+start_train = 10000
+eval_interval = 2000
+max_iter = 1000000.0
+hidden_size2 = 256
+hidden_size1 = 256
+sigma = 0.1
+polyak = 0.001
+critic_lr = 0.001
+actor_lr = 0.0001
+gamma = 0.99
+seed = 2
+env_id = HumanoidStandup-v2
+args = Namespace(L=30.0, algo='ddpg', batch_size=128, device='cpu', env='HumanoidStandup-v2', ep_len=None, eval_interval=2000, fill_buffer=20000, gamma=0.99, h_scale=1.0, hidden=256, lr=0.0001, max_iter=1000000.0, no_double=True, noise='gaussian', num_trial=1, pi_lr=0.0001, q_lr=0.001, render=False, seed=2, sigma=0.1, smooth=False, start_train=10000, tau=0.001, train_interval=50)

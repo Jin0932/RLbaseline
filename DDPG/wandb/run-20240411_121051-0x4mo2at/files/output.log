@@ -1,0 +1,22 @@
+environment : Humanoid-v2
+--------------------------------------------------------------------------------
+observation dim : 376 / action dim : 17
+dt : 0.015
+control range : [0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4]
+--------------------------------------------------------------------------------
+step 0 : 331.5696
+adding checkpoints...
+Traceback (most recent call last):
+  File "main.py", line 57, in <module>
+    render=args.render
+  File "F:\OpenCode\RLbaseline\DDPG\algorithms\ddpg\ddpg.py", line 145, in run_ddpg
+    eval_avg_reward = agent.eval(env_id, t)
+  File "F:\OpenCode\RLbaseline\DDPG\algorithms\ddpg\ddpg_agent.py", line 149, in eval
+    next_state, reward, done, _ = env.step(action)
+  File "C:\Users\JQWang\AppData\Local\anaconda3\envs\PIHJQ\lib\site-packages\gym\wrappers\time_limit.py", line 16, in step
+    observation, reward, done, info = self.env.step(action)
+  File "C:\Users\JQWang\AppData\Local\anaconda3\envs\PIHJQ\lib\site-packages\gym\envs\mujoco\humanoid.py", line 27, in step
+    pos_after = mass_center(self.model, self.sim)
+  File "C:\Users\JQWang\AppData\Local\anaconda3\envs\PIHJQ\lib\site-packages\gym\envs\mujoco\humanoid.py", line 8, in mass_center
+    return (np.sum(mass * xpos, 0) / np.sum(mass))[0]
+KeyboardInterrupt
