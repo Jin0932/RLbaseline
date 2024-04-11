@@ -31,7 +31,7 @@ for ((i=0; i<3; i++)); do
         for ((k=start; k<=end; k++)); do
             # Linux 
             # tmux send-keys "source ~/.bashrc && conda activate pihjq" C-m
-            tmux send-keys "conda activate pihjq" C-m
+            tmux send-keys "conda activate rlddpg" C-m
             tmux send-keys "echo 'Running ${environments[$k]}'" C-m
 
             for seed in "${seeds[@]}"; do
